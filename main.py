@@ -1,6 +1,13 @@
-original_array = [6, 5, 4, 3, 2, 1]
+def reversearrayinplace(arr):
+    startindex = 0
+    endindex = len(arr) - 1
 
-reversed_array = original_array[::-1]
+    while startindex < endindex:
+        arr[startindex], arr[endindex] = arr[endindex], arr[startindex]
+        startindex += 1
+        endindex -= 1
+originalarray = [6, 5, 4, 3, 2, 1]
+print("Originalarray:",originalarray)
 
-print("Original array : ",original_array)
-print("Reversed array: ",reversed_array)
+reversearrayinplace(originalarray)
+print("Reversedarray: ",originalarray)
